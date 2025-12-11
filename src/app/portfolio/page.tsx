@@ -14,6 +14,7 @@ import {
   CheckCircle,
   Star,
   Calendar,
+  Clock,
   Filter
 } from 'lucide-react';
 
