@@ -40,7 +40,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/start-project"
-              className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg"
+              className="px-8 py-4 bg-white text-black rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Start Your Project
             </Link>
@@ -101,7 +101,7 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">2. Choose Your Developer</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">2. Select Your Expert</h3>
               <p className="text-gray-600">
                 Review portfolios, ratings, and pricing. Connect directly with developers and discuss your project.
               </p>
@@ -259,7 +259,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/start-project"
-              className="px-8 py-4 bg-white text-primary rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-xl"
+              className="px-8 py-4 bg-white text-black rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-xl"
             >
               Start Your Project Now
             </Link>
