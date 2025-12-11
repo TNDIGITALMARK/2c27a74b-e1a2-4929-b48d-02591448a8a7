@@ -193,18 +193,12 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Join hundreds of businesses who've launched successful websites through our platform
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link
               href="/start-project"
               className="px-8 py-4 bg-white text-black rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-xl"
             >
               Start Your Project Now
-            </Link>
-            <Link
-              href="#join-developer"
-              className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors"
-            >
-              Join as a Developer
             </Link>
           </div>
         </div>
