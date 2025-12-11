@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Navigation } from '@/components/layout/navigation';
 import { TestimonialCard } from '@/components/marketplace/testimonial-card';
 import { testimonials } from '@/lib/data/mock-data';
@@ -11,8 +12,7 @@ import {
   MessageSquare,
   Shield,
   Zap,
-  ArrowRight,
-  Code2
+  ArrowRight
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -141,7 +141,7 @@ export default function HomePage() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why WebMarket?
+              Why Malis Website Madness?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               The smartest way to get your website built
@@ -209,9 +209,15 @@ export default function HomePage() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 font-bold text-xl mb-4">
-                <Code2 className="w-6 h-6" />
-                <span>WebMarket</span>
+              <div className="flex items-center gap-2 mb-4">
+                <Image
+                  src="/logo.png"
+                  alt="Malis Website Madness"
+                  width={40}
+                  height={40}
+                  className="object-contain brightness-0 invert"
+                />
+                <span className="font-bold text-lg">Malis Website Madness</span>
               </div>
               <p className="text-gray-400 text-sm">
                 Connecting businesses with talented web developers since 2024.
@@ -250,7 +256,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 WebMarket. All rights reserved.</p>
+            <p>&copy; 2024 Malis Website Madness. All rights reserved.</p>
           </div>
         </div>
       </footer>

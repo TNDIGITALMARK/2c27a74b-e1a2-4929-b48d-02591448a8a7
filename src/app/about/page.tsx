@@ -154,7 +154,7 @@ export default function AboutPage() {
                 Empowering Businesses Through Technology
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                At WebMarket, we believe every business deserves a professional online presence
+                At Malis Website Madness, we believe every business deserves a professional online presence
                 that reflects their quality and values. Our mission is to make world-class web
                 development accessible and affordable for businesses of all sizes.
               </p>
@@ -267,7 +267,7 @@ export default function AboutPage() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose WebMarket?
+              Why Choose Malis Website Madness?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               What sets us apart from other web development agencies
@@ -398,7 +398,7 @@ export default function AboutPage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto text-center">
-          <p className="text-gray-400">&copy; 2024 WebMarket. All rights reserved.</p>
+          <p className="text-gray-400">&copy; 2024 Malis Website Madness. All rights reserved.</p>
         </div>
       </footer>
     </div>

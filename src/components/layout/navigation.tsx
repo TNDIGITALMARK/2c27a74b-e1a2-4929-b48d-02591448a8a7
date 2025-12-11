@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,9 +13,17 @@ export function Navigation() {
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-            <Code2 className="w-6 h-6 text-primary" />
-            <span className="text-gray-900">WebMarket</span>
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Image
+              src="/logo.png"
+              alt="Malis Website Madness"
+              width={50}
+              height={50}
+              className="object-contain"
+            />
+            <span className="font-bold text-lg text-gray-900 hidden sm:inline">
+              Malis Website Madness
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
