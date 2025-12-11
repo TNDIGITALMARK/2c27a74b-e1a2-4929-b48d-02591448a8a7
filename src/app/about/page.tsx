@@ -92,7 +92,7 @@ export default function AboutPage() {
     },
     {
       title: 'Transparent Pricing',
-      description: 'Clear, upfront pricing with no hidden fees. You know exactly what you're getting.'
+      description: 'Clear, upfront pricing with no hidden fees. You know exactly what you\'re getting.'
     },
     {
       title: 'Fast Turnaround',

@@ -134,7 +134,7 @@ const caseStudies: CaseStudy[] = [
     year: '2024',
     image: '/portfolio/restaurant.jpg',
     testimonial: {
-      quote: 'Our online presence has transformed our business. We're booked solid weeks in advance now.',
+      quote: 'Our online presence has transformed our business. We\'re booked solid weeks in advance now.',
       author: 'Chef Antoine Bernard',
       position: 'Owner, The Grand Table'
     }
