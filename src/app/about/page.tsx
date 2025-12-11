@@ -100,7 +100,7 @@ export default function AboutPage() {
     },
     {
       title: 'Ongoing Support',
-      description: 'We don't disappear after launch. Comprehensive support and maintenance packages available.'
+      description: 'We don\'t disappear after launch. Comprehensive support and maintenance packages available.'
     }
   ];
 
