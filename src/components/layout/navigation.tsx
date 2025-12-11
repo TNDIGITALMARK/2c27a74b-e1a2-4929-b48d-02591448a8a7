@@ -20,38 +20,50 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
-              href="/"
+              href="/templates"
               className="text-gray-700 hover:text-primary transition-colors font-medium"
             >
-              Marketplace
+              Templates
             </Link>
             <Link
-              href="/start-project"
+              href="/custom"
               className="text-gray-700 hover:text-primary transition-colors font-medium"
             >
-              Start a Project
+              Custom
             </Link>
             <Link
-              href="#how-it-works"
+              href="/portfolio"
               className="text-gray-700 hover:text-primary transition-colors font-medium"
             >
-              How It Works
+              Portfolio
+            </Link>
+            <Link
+              href="/pricing"
+              className="text-gray-700 hover:text-primary transition-colors font-medium"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-700 hover:text-primary transition-colors font-medium"
+            >
+              About
             </Link>
           </div>
 
           {/* CTA Buttons - Desktop */}
           <div className="hidden md:flex items-center gap-3">
             <Link
-              href="/start-project"
+              href="/contact"
               className="px-4 py-2 text-primary hover:bg-accent rounded-lg font-medium transition-colors"
             >
-              Get a Website
+              Contact
             </Link>
             <Link
-              href="#join-developer"
+              href="/templates"
               className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
-              Join as Developer
+              Get Started
             </Link>
           </div>
 
@@ -74,40 +86,54 @@ export function Navigation() {
           <div className="md:hidden border-t border-gray-200 py-4">
             <div className="flex flex-col gap-4">
               <Link
-                href="/"
+                href="/templates"
                 className="text-gray-700 hover:text-primary transition-colors font-medium px-2 py-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Marketplace
+                Templates
               </Link>
               <Link
-                href="/start-project"
+                href="/custom"
                 className="text-gray-700 hover:text-primary transition-colors font-medium px-2 py-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Start a Project
+                Custom
               </Link>
               <Link
-                href="#how-it-works"
+                href="/portfolio"
                 className="text-gray-700 hover:text-primary transition-colors font-medium px-2 py-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                How It Works
+                Portfolio
+              </Link>
+              <Link
+                href="/pricing"
+                className="text-gray-700 hover:text-primary transition-colors font-medium px-2 py-1"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pricing
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-primary transition-colors font-medium px-2 py-1"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
               </Link>
               <div className="flex flex-col gap-2 mt-2 pt-4 border-t border-gray-200">
                 <Link
-                  href="/start-project"
+                  href="/contact"
                   className="px-4 py-2 text-center text-primary bg-accent rounded-lg font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Get a Website
+                  Contact
                 </Link>
                 <Link
-                  href="#join-developer"
+                  href="/templates"
                   className="px-4 py-2 text-center bg-primary text-primary-foreground rounded-lg font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Join as Developer
+                  Get Started
                 </Link>
               </div>
             </div>
