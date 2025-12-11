@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { Navigation } from '@/components/layout/navigation';
-import { DeveloperCard } from '@/components/marketplace/developer-card';
 import { TestimonialCard } from '@/components/marketplace/testimonial-card';
-import { PortfolioCard } from '@/components/marketplace/portfolio-card';
-import { developers, testimonials } from '@/lib/data/mock-data';
+import { testimonials } from '@/lib/data/mock-data';
 import {
   Search,
   Users,
@@ -18,9 +16,6 @@ import {
 } from 'lucide-react';
 
 export default function HomePage() {
-  const featuredDevelopers = developers.slice(0, 3);
-  const allPortfolio = developers.flatMap(dev => dev.portfolio).slice(0, 6);
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -120,64 +115,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Developers */}
-      <section id="developers" className="py-20">
-        <div className="container mx-auto">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-                Featured Developers
-              </h2>
-              <p className="text-lg text-gray-600">
-                Top-rated professionals ready to build your website
-              </p>
-            </div>
-            <Link
-              href="#all-developers"
-              className="hidden md:flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
-            >
-              View All
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredDevelopers.map(developer => (
-              <DeveloperCard key={developer.id} developer={developer} />
-            ))}
-          </div>
-
-          <div className="text-center mt-8 md:hidden">
-            <Link
-              href="#all-developers"
-              className="inline-flex items-center gap-2 text-primary font-semibold"
-            >
-              View All Developers
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Showcase */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Recent Projects
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              See the quality of work our developers deliver
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allPortfolio.map(item => (
-              <PortfolioCard key={item.id} item={item} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials */}
       <section className="py-20">
