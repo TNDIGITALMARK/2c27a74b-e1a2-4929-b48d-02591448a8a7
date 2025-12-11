@@ -182,7 +182,7 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-br from-primary to-primary/80">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Ready to Get Started?
+            Ready to .?
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Join hundreds of businesses who've launched successful websites through our platform

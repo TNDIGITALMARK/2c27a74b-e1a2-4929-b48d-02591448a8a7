@@ -21,8 +21,11 @@ export default function StartProjectPage() {
     description: ''
   });
   const [matchedDevelopers, setMatchedDevelopers] = useState(developers.slice(0, 4));
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (step === 2) {
       // Match developers based on project type
       let matched = developers;
@@ -36,6 +39,36 @@ export default function StartProjectPage() {
         matched = getDevelopersBySpecialization('Business');
       }
       setMatchedDevelopers(matched.slice(0, 4));
+
+      // Send email with project details
+      setIsSubmitting(true);
+      setError('');
+
+      try {
+        const response = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            formType: 'start-project',
+            formData: formData,
+          }),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          setSubmitted(true);
+        } else {
+          setError(result.error || 'Failed to send project request.');
+        }
+      } catch (err) {
+        console.error('Error submitting form:', err);
+        setError('Failed to send project request. Please try again later.');
+      } finally {
+        setIsSubmitting(false);
+      }
     }
     setStep(step + 1);
   };
@@ -282,10 +315,10 @@ export default function StartProjectPage() {
               </button>
               <button
                 onClick={handleNext}
-                disabled={!formData.budget || !formData.timeline}
+                disabled={!formData.budget || !formData.timeline || isSubmitting}
                 className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
-                Find Developers
+                {isSubmitting ? 'Processing...' : 'Find Developers'}
                 <ArrowRight className="w-5 h-5" />
               </button>
             </div>
@@ -296,6 +329,26 @@ export default function StartProjectPage() {
         {step === 3 && (
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+              {submitted && (
+                <div className="mb-6 p-4 bg-success/10 border border-success/20 rounded-lg flex items-center gap-3">
+                  <CheckCircle className="w-6 h-6 text-success flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-success">Project request sent successfully!</p>
+                    <p className="text-sm text-success/80">We've emailed your project details and will get back to you soon.</p>
+                  </div>
+                </div>
+              )}
+
+              {error && (
+                <div className="mb-6 p-4 bg-destructive/10 border border-destructive/20 rounded-lg flex items-center gap-3">
+                  <div className="w-6 h-6 text-destructive flex-shrink-0">⚠️</div>
+                  <div>
+                    <p className="font-semibold text-destructive">Error sending project request</p>
+                    <p className="text-sm text-destructive/80">{error}</p>
+                  </div>
+                </div>
+              )}
+
               <h1 className="text-3xl font-bold text-gray-900 mb-4">
                 We Found {matchedDevelopers.length} Perfect Matches!
               </h1>
