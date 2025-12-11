@@ -8,7 +8,6 @@ import {
   Star,
   Zap,
   Sparkles,
-  Clock,
   Shield,
   MessageSquare,
   Settings,
@@ -20,19 +19,18 @@ import {
 export default function PricingPage() {
   const templatePackages = [
     {
-      name: 'Starter Template',
-      price: 199,
+      name: 'Starter Site',
+      price: 20,
       originalPrice: null,
-      description: 'Perfect for small businesses and personal projects',
+      description: 'Perfect for getting started quickly',
       features: [
-        'Choose from 15+ templates',
-        'Up to 5 pages',
+        'Choose from basic templates',
+        'Up to 3 pages',
         'Mobile responsive design',
-        'Basic customization (colors, fonts)',
+        'Basic customization',
         'Contact form',
         'SEO basics',
-        '30-day support',
-        'One round of revisions'
+        '14-day support'
       ],
       notIncluded: [
         'Custom features',
@@ -41,124 +39,123 @@ export default function PricingPage() {
         'Priority support'
       ],
       popular: false,
-      cta: 'Choose Template',
+      cta: 'Get Started',
       link: '/templates'
     },
     {
-      name: 'Professional Template',
-      price: 399,
+      name: 'Small Business',
+      price: 45,
       originalPrice: null,
-      description: 'Most popular choice for growing businesses',
+      description: 'Ideal for small businesses and startups',
       features: [
-        'All Starter features',
-        'Choose from all templates',
-        'Up to 10 pages',
+        'Choose from 20+ templates',
+        'Up to 5 pages',
+        'Mobile responsive design',
         'Advanced customization',
-        'Blog functionality',
-        'Analytics integration',
-        '90-day support',
-        'Three rounds of revisions',
-        'Speed optimization',
-        'Social media integration'
+        'Contact form',
+        'SEO optimization',
+        '30-day support',
+        'Two rounds of revisions'
       ],
       notIncluded: [
         'E-commerce setup',
         'Custom development',
-        'Ongoing maintenance'
+        'Advanced integrations'
+      ],
+      popular: false,
+      cta: 'Choose Plan',
+      link: '/templates'
+    },
+    {
+      name: 'Professional',
+      price: 60,
+      originalPrice: null,
+      description: 'Most popular for growing businesses',
+      features: [
+        'All Small Business features',
+        'Up to 10 pages',
+        'Blog functionality',
+        'Analytics integration',
+        'Social media integration',
+        '60-day support',
+        'Three rounds of revisions',
+        'Speed optimization'
+      ],
+      notIncluded: [
+        'E-commerce functionality',
+        'Custom features',
+        'Priority support'
       ],
       popular: true,
       cta: 'Get Started',
       link: '/templates'
     },
     {
-      name: 'Premium Template',
-      price: 699,
+      name: 'Creative / Portfolio',
+      price: 75,
       originalPrice: null,
-      description: 'Complete solution with advanced features',
+      description: 'Perfect for creatives and portfolios',
       features: [
         'All Professional features',
-        'Unlimited pages',
-        'Premium templates',
-        'E-commerce ready (up to 50 products)',
-        'Payment gateway integration',
-        'Advanced SEO setup',
-        '6-month support',
+        'Premium portfolio templates',
+        'Image galleries & lightbox',
+        'Project showcase sections',
+        'Testimonials module',
+        '90-day support',
         'Unlimited revisions',
-        'Priority support',
-        'Content migration',
-        'Training session included'
+        'Custom design tweaks'
+      ],
+      notIncluded: [
+        'E-commerce functionality',
+        'Custom development'
+      ],
+      popular: false,
+      cta: 'Choose Portfolio',
+      link: '/templates'
+    },
+    {
+      name: 'E-Commerce Ready',
+      price: 75,
+      originalPrice: null,
+      description: 'Complete online store solution',
+      features: [
+        'All Professional features',
+        'E-commerce templates',
+        'Up to 50 products',
+        'Payment gateway integration',
+        'Shopping cart & checkout',
+        'Inventory management',
+        '90-day support',
+        'Product upload assistance'
       ],
       notIncluded: [
         'Custom features development',
-        'Ongoing content updates'
+        'Ongoing product management'
       ],
       popular: false,
-      cta: 'Go Premium',
+      cta: 'Start Selling',
       link: '/templates'
-    }
-  ];
-
-  const customPackages = [
-    {
-      name: 'Custom Starter',
-      price: 2499,
-      priceLabel: 'Starting at',
-      description: 'Fully custom website built from scratch',
-      features: [
-        'Custom design & development',
-        'Up to 10 pages',
-        'Unique UI/UX design',
-        'Mobile responsive',
-        'Contact forms',
-        'Basic integrations',
-        'CMS setup',
-        '3-month support',
-        'Project manager assigned',
-        'Regular progress updates'
-      ],
-      duration: '6-8 weeks',
-      bestFor: 'Small businesses, portfolios, service websites'
     },
     {
-      name: 'Custom Professional',
-      price: 4999,
-      priceLabel: 'Starting at',
-      description: 'Advanced custom solution with complex features',
+      name: 'Custom Website',
+      price: 100,
+      originalPrice: null,
+      description: 'Fully custom built to your exact needs',
       features: [
-        'All Custom Starter features',
-        'Up to 20 pages',
-        'Advanced custom features',
-        'User authentication',
-        'Database design',
-        'API integrations',
-        'Payment processing',
-        '6-month support',
-        'Security audit',
-        'Performance optimization'
-      ],
-      duration: '8-12 weeks',
-      bestFor: 'E-commerce, SaaS platforms, corporate websites'
-    },
-    {
-      name: 'Custom Enterprise',
-      price: 9999,
-      priceLabel: 'Starting at',
-      description: 'Enterprise-grade custom solution',
-      features: [
-        'All Custom Professional features',
+        'Fully custom design',
         'Unlimited pages',
-        'Complex system architecture',
-        'Multi-user roles & permissions',
-        'Advanced analytics',
-        'Third-party integrations',
-        'Scalable infrastructure',
-        '12-month support',
-        'Dedicated team',
-        'Priority support',
-        'Training & documentation'
+        'Bespoke functionality',
+        'Advanced integrations',
+        'Priority development',
+        '6-month support',
+        'Unlimited revisions',
+        'SEO & performance optimization',
+        'Training included'
       ],
-      duration: '12-16 weeks',
-      bestFor: 'Large businesses, platforms, marketplaces'
+      notIncluded: [],
+      popular: false,
+      cta: 'Go Custom',
+      link: '/contact'
     }
   ];
 
@@ -181,24 +178,24 @@ export default function PricingPage() {
       <section className="bg-gradient-to-br from-primary/10 via-white to-accent/10 py-20">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Simple, Transparent Pricing
+            Affordable Website Packages
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Choose the perfect plan for your business. No hidden fees, no surprises.
+            Professional websites starting from just £20. No hidden fees, no surprises.
             All prices are one-time payments with optional ongoing support.
           </p>
-          <div className="flex items-center justify-center gap-4 text-sm text-gray-600">
+          <div className="flex items-center justify-center gap-4 text-sm text-gray-600 flex-wrap">
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5 text-success" />
               <span>No hidden fees</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5 text-success" />
-              <span>Lifetime updates</span>
+              <span>Fast delivery</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5 text-success" />
-              <span>Money-back guarantee</span>
+              <span>Quality guaranteed</span>
             </div>
           </div>
         </div>
@@ -209,14 +206,14 @@ export default function PricingPage() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Template-Based Websites
+              Website Packages
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Quick, affordable solutions using our premium templates
+              Affordable, professional websites for every need
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {templatePackages.map((pkg, idx) => (
               <div
                 key={idx}
@@ -229,20 +226,20 @@ export default function PricingPage() {
                     ⭐ Most Popular
                   </div>
                 )}
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                  <p className="text-gray-600 text-sm mb-6">{pkg.description}</p>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{pkg.description}</p>
 
-                  <div className="mb-6">
+                  <div className="mb-4">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold text-primary">${pkg.price}</span>
+                      <span className="text-4xl font-bold text-primary">£{pkg.price}</span>
                       <span className="text-gray-600">one-time</span>
                     </div>
                   </div>
 
                   <Link
                     href={pkg.link}
-                    className={`block w-full py-3 rounded-lg font-semibold text-center mb-6 transition-all ${
+                    className={`block w-full py-2.5 rounded-lg font-semibold text-center mb-4 transition-all text-sm ${
                       pkg.popular
                         ? 'bg-primary text-white hover:opacity-90'
                         : 'bg-white border-2 border-primary text-primary hover:bg-primary/5'
@@ -251,23 +248,23 @@ export default function PricingPage() {
                     {pkg.cta}
                   </Link>
 
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-2 mb-4">
                     <p className="text-xs font-bold text-gray-700 uppercase">Included:</p>
                     {pkg.features.map((feature, fidx) => (
                       <div key={fidx} className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-700">{feature}</span>
+                        <Check className="w-4 h-4 text-success flex-shrink-0 mt-0.5" />
+                        <span className="text-xs text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   {pkg.notIncluded.length > 0 && (
-                    <div className="space-y-2 pt-6 border-t border-gray-200">
+                    <div className="space-y-2 pt-4 border-t border-gray-200">
                       <p className="text-xs font-bold text-gray-700 uppercase">Not Included:</p>
                       {pkg.notIncluded.map((item, nidx) => (
                         <div key={nidx} className="flex items-start gap-2">
-                          <X className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-gray-500">{item}</span>
+                          <X className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
+                          <span className="text-xs text-gray-500">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -279,63 +276,6 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Custom Packages */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Custom Website Development
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Fully bespoke solutions built exactly to your specifications
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {customPackages.map((pkg, idx) => (
-              <div key={idx} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden border border-gray-200">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                  <p className="text-gray-600 text-sm mb-6">{pkg.description}</p>
-
-                  <div className="mb-6">
-                    <div className="text-sm text-gray-600 mb-1">{pkg.priceLabel}</div>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold text-primary">${pkg.price}</span>
-                    </div>
-                    <div className="flex items-center gap-2 mt-3 text-sm text-gray-600">
-                      <Clock className="w-4 h-4" />
-                      <span>Timeline: {pkg.duration}</span>
-                    </div>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className="block w-full py-3 bg-primary text-white rounded-lg font-semibold text-center mb-6 hover:opacity-90 transition-opacity"
-                  >
-                    Request Quote
-                  </Link>
-
-                  <div className="space-y-3 mb-6">
-                    <p className="text-xs font-bold text-gray-700 uppercase">Included:</p>
-                    {pkg.features.map((feature, fidx) => (
-                      <div key={fidx} className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="pt-6 border-t border-gray-200">
-                    <p className="text-xs font-bold text-gray-700 uppercase mb-2">Best For:</p>
-                    <p className="text-sm text-gray-600">{pkg.bestFor}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Add-Ons Section */}
       <section className="py-20">
@@ -355,8 +295,8 @@ export default function PricingPage() {
               return (
                 <div key={idx} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                   <Icon className="w-10 h-10 text-primary mb-3" />
-                  <h3 className="font-bold text-gray-900 mb-2">{addon.name}</h3>
-                  <div className="text-2xl font-bold text-primary mb-3">+${addon.price}</div>
+                  <h3 className="font-bold text-gray-900 mb-2 text-sm">{addon.name}</h3>
+                  <div className="text-2xl font-bold text-primary mb-3">+£{addon.price}</div>
                   <button className="w-full px-4 py-2 bg-primary/10 text-primary rounded-lg font-medium hover:bg-primary/20 transition-colors text-sm">
                     Add to Package
                   </button>
@@ -372,38 +312,45 @@ export default function PricingPage() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Template vs Custom Comparison
+              Package Comparison
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Not sure which option is right for you? Here's a quick comparison
+              Compare features across all our packages to find the perfect fit
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="overflow-x-auto">
-              <table className="w-full">
+              <table className="w-full text-sm">
                 <thead className="bg-gray-100">
                   <tr>
-                    <th className="px-6 py-4 text-left text-gray-900 font-bold">Feature</th>
-                    <th className="px-6 py-4 text-center text-gray-900 font-bold">Templates</th>
-                    <th className="px-6 py-4 text-center text-gray-900 font-bold">Custom</th>
+                    <th className="px-4 py-3 text-left text-gray-900 font-bold">Feature</th>
+                    <th className="px-4 py-3 text-center text-gray-900 font-bold">Starter</th>
+                    <th className="px-4 py-3 text-center text-gray-900 font-bold">Small Biz</th>
+                    <th className="px-4 py-3 text-center text-gray-900 font-bold">Pro</th>
+                    <th className="px-4 py-3 text-center text-gray-900 font-bold">Portfolio</th>
+                    <th className="px-4 py-3 text-center text-gray-900 font-bold">E-Com</th>
+                    <th className="px-4 py-3 text-center text-gray-900 font-bold">Custom</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   {[
-                    { feature: 'Price Range', template: '$199 - $699', custom: '$2,499+' },
-                    { feature: 'Timeline', template: '1-2 weeks', custom: '6-16 weeks' },
-                    { feature: 'Design Flexibility', template: 'Moderate', custom: 'Unlimited' },
-                    { feature: 'Unique Design', template: '❌', custom: '✅' },
-                    { feature: 'Custom Features', template: 'Limited', custom: 'Unlimited' },
-                    { feature: 'E-Commerce', template: 'Basic', custom: 'Advanced' },
-                    { feature: 'Scalability', template: 'Good', custom: 'Excellent' },
-                    { feature: 'Best For', template: 'Quick launch', custom: 'Unique needs' }
+                    { feature: 'Price', starter: '£20', smallBiz: '£45', pro: '£60', portfolio: '£75', ecom: '£75', custom: '£100' },
+                    { feature: 'Pages', starter: '3', smallBiz: '5', pro: '10', portfolio: '10+', ecom: '10+', custom: 'Unlimited' },
+                    { feature: 'Support', starter: '14 days', smallBiz: '30 days', pro: '60 days', portfolio: '90 days', ecom: '90 days', custom: '6 months' },
+                    { feature: 'Revisions', starter: '1', smallBiz: '2', pro: '3', portfolio: 'Unlimited', ecom: 'Basic', custom: 'Unlimited' },
+                    { feature: 'E-Commerce', starter: '❌', smallBiz: '❌', pro: '❌', portfolio: '❌', ecom: '✅', custom: '✅' },
+                    { feature: 'Custom Design', starter: '❌', smallBiz: '❌', pro: '❌', portfolio: 'Partial', ecom: '❌', custom: '✅' },
+                    { feature: 'SEO', starter: 'Basic', smallBiz: 'Standard', pro: 'Advanced', portfolio: 'Advanced', ecom: 'Advanced', custom: 'Premium' }
                   ].map((row, idx) => (
                     <tr key={idx}>
-                      <td className="px-6 py-4 text-gray-900 font-medium">{row.feature}</td>
-                      <td className="px-6 py-4 text-center text-gray-700">{row.template}</td>
-                      <td className="px-6 py-4 text-center text-gray-700">{row.custom}</td>
+                      <td className="px-4 py-3 text-gray-900 font-medium">{row.feature}</td>
+                      <td className="px-4 py-3 text-center text-gray-700">{row.starter}</td>
+                      <td className="px-4 py-3 text-center text-gray-700">{row.smallBiz}</td>
+                      <td className="px-4 py-3 text-center text-gray-700">{row.pro}</td>
+                      <td className="px-4 py-3 text-center text-gray-700">{row.portfolio}</td>
+                      <td className="px-4 py-3 text-center text-gray-700">{row.ecom}</td>
+                      <td className="px-4 py-3 text-center text-gray-700">{row.custom}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -426,23 +373,27 @@ export default function PricingPage() {
             {[
               {
                 q: 'Are these prices one-time or recurring?',
-                a: 'All our website development prices are one-time payments. You own the website outright. Maintenance packages are optional and billed monthly.'
+                a: 'All our website prices are one-time payments. You own the website outright. Maintenance packages are optional and billed monthly.'
               },
               {
                 q: 'What payment methods do you accept?',
-                a: 'We accept all major credit cards, PayPal, and bank transfers. For custom projects over $5,000, we offer payment plans with 50% upfront and 50% on completion.'
+                a: 'We accept all major credit cards, PayPal, and bank transfers. Payment is required upfront for packages under £100.'
               },
               {
                 q: 'Do you offer refunds?',
-                a: 'Yes! We offer a 30-day money-back guarantee for template packages. For custom projects, we refund the deposit if we cancel before design approval.'
+                a: 'Yes! We offer a 14-day money-back guarantee if you\'re not satisfied with your website. Terms and conditions apply.'
               },
               {
                 q: 'What happens after my website is live?',
-                a: 'You receive full ownership of your website. We provide documentation and training. Optional maintenance packages are available starting at $99/month.'
+                a: 'You receive full ownership of your website. We provide documentation and basic training. Optional maintenance packages are available starting at £99/month.'
               },
               {
                 q: 'Can I upgrade my package later?',
-                a: 'Absolutely! You can upgrade from a template to custom development, or add features anytime. We credit your original payment toward the upgrade.'
+                a: 'Absolutely! You can upgrade to a higher package or add features anytime. We credit your original payment toward the upgrade.'
+              },
+              {
+                q: 'How long does it take to get my website?',
+                a: 'Delivery times vary by package. Starter sites take 3-5 days, while custom websites take 2-4 weeks depending on complexity.'
               }
             ].map((faq, idx) => (
               <div key={idx} className="bg-white p-6 rounded-lg shadow-md">
