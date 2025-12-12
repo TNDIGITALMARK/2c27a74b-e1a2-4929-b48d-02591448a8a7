@@ -38,7 +38,7 @@ export const templates: Template[] = [
     name: 'Corporate Pro',
     category: 'business',
     description: 'Professional business website with modern design. Perfect for consulting firms, agencies, and corporate services.',
-    price: 299,
+    price: 60,
     popularity: 95,
     createdAt: new Date('2025-01-01'),
     features: [
@@ -59,7 +59,7 @@ export const templates: Template[] = [
     name: 'Startup Launch',
     category: 'business',
     description: 'Modern startup-focused template with bold design and conversion-optimized layouts.',
-    price: 399,
+    price: 100,
     popularity: 88,
     createdAt: new Date('2024-12-15'),
     features: [
@@ -80,7 +80,7 @@ export const templates: Template[] = [
     name: 'Professional Services',
     category: 'business',
     description: 'Clean and elegant template for professional service providers.',
-    price: 249,
+    price: 45,
     popularity: 82,
     createdAt: new Date('2024-11-20'),
     features: [
@@ -102,7 +102,7 @@ export const templates: Template[] = [
     name: 'Fashion Store Pro',
     category: 'ecommerce',
     description: 'Beautiful e-commerce template for fashion and apparel brands with advanced product filtering.',
-    price: 599,
+    price: 75,
     popularity: 92,
     createdAt: new Date('2025-01-10'),
     features: [
@@ -124,7 +124,7 @@ export const templates: Template[] = [
     name: 'Digital Products Market',
     category: 'ecommerce',
     description: 'Specialized template for selling digital products, courses, and downloads.',
-    price: 499,
+    price: 75,
     popularity: 86,
     createdAt: new Date('2024-12-20'),
     features: [
@@ -144,7 +144,7 @@ export const templates: Template[] = [
     name: 'Multi-Vendor Marketplace',
     category: 'ecommerce',
     description: 'Complete marketplace solution with vendor management and multi-store support.',
-    price: 899,
+    price: 75,
     popularity: 79,
     createdAt: new Date('2024-12-01'),
     features: [
@@ -166,7 +166,7 @@ export const templates: Template[] = [
     name: 'Portfolio Showcase',
     category: 'creative',
     description: 'Stunning portfolio template for designers, photographers, and creative professionals.',
-    price: 199,
+    price: 75,
     popularity: 90,
     createdAt: new Date('2025-01-05'),
     features: [
@@ -186,7 +186,7 @@ export const templates: Template[] = [
     name: 'Artist Studio',
     category: 'creative',
     description: 'Elegant template for artists to showcase and sell their work online.',
-    price: 349,
+    price: 75,
     popularity: 84,
     createdAt: new Date('2024-12-10'),
     features: [
@@ -208,7 +208,7 @@ export const templates: Template[] = [
     name: 'Fine Dining',
     category: 'restaurant',
     description: 'Elegant restaurant template with online reservations and menu showcase.',
-    price: 449,
+    price: 60,
     popularity: 87,
     createdAt: new Date('2025-01-08'),
     features: [
@@ -229,7 +229,7 @@ export const templates: Template[] = [
     name: 'Cafe & Bakery',
     category: 'restaurant',
     description: 'Warm and inviting template perfect for cafes, bakeries, and coffee shops.',
-    price: 299,
+    price: 45,
     popularity: 85,
     createdAt: new Date('2024-12-05'),
     features: [
@@ -251,7 +251,7 @@ export const templates: Template[] = [
     name: 'Product Launch',
     category: 'landing',
     description: 'High-converting landing page template for product launches and campaigns.',
-    price: 149,
+    price: 20,
     popularity: 93,
     createdAt: new Date('2025-01-12'),
     features: [
@@ -272,7 +272,7 @@ export const templates: Template[] = [
     name: 'Lead Generation',
     category: 'landing',
     description: 'Optimized for capturing leads with compelling CTAs and form integration.',
-    price: 129,
+    price: 20,
     popularity: 89,
     createdAt: new Date('2024-12-28'),
     features: [
@@ -292,7 +292,7 @@ export const templates: Template[] = [
     name: 'Event Registration',
     category: 'landing',
     description: 'Purpose-built landing page for event registrations and ticket sales.',
-    price: 179,
+    price: 20,
     popularity: 81,
     createdAt: new Date('2024-11-15'),
     features: [
@@ -314,7 +314,7 @@ export const templates: Template[] = [
     name: 'Agency Pro',
     category: 'services',
     description: 'Complete agency website with project showcase and client management.',
-    price: 549,
+    price: 100,
     popularity: 91,
     createdAt: new Date('2025-01-03'),
     features: [
@@ -335,7 +335,7 @@ export const templates: Template[] = [
     name: 'Consulting Firm',
     category: 'services',
     description: 'Professional template for consulting firms and advisory services.',
-    price: 399,
+    price: 60,
     popularity: 83,
     createdAt: new Date('2024-12-12'),
     features: [
@@ -355,7 +355,7 @@ export const templates: Template[] = [
     name: 'Freelancer Portfolio',
     category: 'services',
     description: 'Personal brand template for freelancers and independent consultants.',
-    price: 179,
+    price: 45,
     popularity: 88,
     createdAt: new Date('2024-11-25'),
     features: [
