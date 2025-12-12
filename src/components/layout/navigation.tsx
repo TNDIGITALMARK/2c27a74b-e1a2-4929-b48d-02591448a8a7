@@ -58,6 +58,12 @@ export function Navigation() {
             >
               About
             </Link>
+            <Link
+              href="/forms"
+              className="text-gray-700 hover:text-primary transition-colors font-medium"
+            >
+              Forms
+            </Link>
           </div>
 
           {/* CTA Buttons - Desktop */}
@@ -128,6 +134,13 @@ export function Navigation() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
+              </Link>
+              <Link
+                href="/forms"
+                className="text-gray-700 hover:text-primary transition-colors font-medium px-2 py-1"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Forms
               </Link>
               <div className="flex flex-col gap-2 mt-2 pt-4 border-t border-gray-200">
                 <Link

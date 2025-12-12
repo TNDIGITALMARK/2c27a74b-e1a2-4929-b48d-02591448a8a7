@@ -34,7 +34,8 @@ export default function ContactPage() {
     setError('');
 
     try {
-      const response = await fetch('/api/send-email', {
+      // Send email
+      const emailResponse = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,9 +46,26 @@ export default function ContactPage() {
         }),
       });
 
-      const result = await response.json();
+      const emailResult = await emailResponse.json();
 
-      if (result.success) {
+      // Save submission to database (don't fail if this fails)
+      try {
+        await fetch('/api/form-submissions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            formType: 'contact',
+            formData: formData,
+          }),
+        });
+      } catch (saveErr) {
+        console.error('Error saving submission:', saveErr);
+        // Continue even if save fails
+      }
+
+      if (emailResult.success) {
         setSubmitted(true);
         setFormData({
           name: '',
@@ -59,7 +77,7 @@ export default function ContactPage() {
         });
         setTimeout(() => setSubmitted(false), 5000);
       } else {
-        setError(result.error || 'Failed to send message. Please try again.');
+        setError(emailResult.error || 'Failed to send message. Please try again.');
       }
     } catch (err) {
       console.error('Error submitting form:', err);
@@ -337,7 +355,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-8 py-4 bg-primary text-black rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="w-5 h-5" />
                     {isSubmitting ? 'Sending...' : 'Send Message'}

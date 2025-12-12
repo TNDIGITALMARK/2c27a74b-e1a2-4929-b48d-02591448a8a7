@@ -58,6 +58,23 @@ export default function StartProjectPage() {
 
         const result = await response.json();
 
+        // Save submission to database (don't fail if this fails)
+        try {
+          await fetch('/api/form-submissions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              formType: 'start-project',
+              formData: formData,
+            }),
+          });
+        } catch (saveErr) {
+          console.error('Error saving submission:', saveErr);
+          // Continue even if save fails
+        }
+
         if (result.success) {
           setSubmitted(true);
         } else {
@@ -316,7 +333,7 @@ export default function StartProjectPage() {
               <button
                 onClick={handleNext}
                 disabled={!formData.budget || !formData.timeline || isSubmitting}
-                className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-8 py-3 bg-primary text-black rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 {isSubmitting ? 'Processing...' : 'Find Developers'}
                 <ArrowRight className="w-5 h-5" />
